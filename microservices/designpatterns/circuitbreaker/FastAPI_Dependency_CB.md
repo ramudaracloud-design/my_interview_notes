@@ -1,4 +1,4 @@
-# custom FastAPI Middleware or Dependency to automatically apply circuit breaking to global routes
+# Custom FastAPI Middleware or Dependency to automatically apply circuit breaking to global routes
 - Using a **FastAPI Dependency** is the cleanest, most idiomatic way to apply a global circuit breaker.
 - While **Middleware** can intercept requests, it executes too early in the FastAPI lifecycle—before routing happens. 
 - A global Dependency allows you to safely wrap your endpoints, access path details, and automatically catch circuit errors to return clean HTTP responses.
