@@ -1,0 +1,4 @@
+- https://www.sparkplayground.com/pyspark-cheat-sheet
+- https://www.palantir.com/docs/foundry/transforms-python-spark/pyspark-syntax-cheat-sheet
+- https://www.almabetter.com/bytes/cheat-sheet/pyspark
+- https://www.datacamp.com/cheat-sheet/pyspark-cheat-sheet-spark-in-python
