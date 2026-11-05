@@ -193,18 +193,19 @@ app = FastAPI()
 print([name for name in dir(app) if not name.startswith("_")])
 
 Or inspect callable methods only:
+```python
 import inspect
 
 for name, member in inspect.getmembers(app):
     if callable(member) and not name.startswith("_"):
         print(name)
-
+```
 This will list all methods available in the specific FastAPI version you have installed.
 
 
 
 —------------------------------------------------------------------------------------------------
-
+```python
 @app.get(
     path,
     *,
@@ -224,9 +225,9 @@ This will list all methods available in the specific FastAPI version you have in
     openapi_extra=None,
     include_in_schema=True
 )
-
+```
 —--------------------------------------------------------------------------------------------------------
-
+```python
 from fastapi import Request
 
 @app.exception_handler(ValueError)
@@ -237,7 +238,9 @@ async def value_error(request: Request, exc: ValueError):
             "message": str(exc)
         }
     )
+```
 —-----------------------------------------------------------------------------------
+```python
 @app.middleware("http")
 async def log(request, call_next):
     print("Before")
@@ -247,14 +250,15 @@ async def log(request, call_next):
     print("After")
 
     return response
-
+```
 —-------------------------------------------------------------------------------------------------
-
+```python
 @app.on_event("startup")
 
 @app.on_event("shutdown")
+```
 —--------------------------------------------------
-
+```python
 @app.on_event("startup")
 async def startup():
     print("Connecting database")
@@ -262,9 +266,12 @@ async def startup():
 @app.on_event("shutdown")
 async def shutdown():
     print("Closing database")
-
+```
 —-----------------------------------------------------------------------------------------------
-The decorators @app.get(), @app.post(), @app.put(), @app.delete(), @app.patch(), @app.options(), @app.head(), and @app.trace() all accept many of the same optional parameters:
+The decorators
+```python
+ @app.get(), @app.post(), @app.put(), @app.delete(), @app.patch(), @app.options(), @app.head(), and @app.trace() all accept many of the same optional parameters:
+```
 
 |Parameter|Purpose|
 |---------|-------|
@@ -284,6 +291,7 @@ The decorators @app.get(), @app.post(), @app.put(), @app.delete(), @app.patch(),
 |callbacks|OpenAPI callback definitions|
 |openapi_extra|Extra OpenAPI metadata|
 |include_in_schema|Whether to include the route in generated API docs|
+
 
 
 
