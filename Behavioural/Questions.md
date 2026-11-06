@@ -104,7 +104,7 @@ You can explain your troubleshooting process:
 -**Validate and communicate**:  check health status, confirm recovery and update affected users.
 
 --- 
-
+# Question 2:  How do you assess a junior developer's technical skills and performance when they rely on AI tools for coding?
 # 1. How I measure my junior developers' performance
 
 I would use these 8 parameters.
